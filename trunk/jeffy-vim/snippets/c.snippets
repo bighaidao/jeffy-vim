@@ -31,7 +31,7 @@ snippet #if
 # (the randomizer code is taken directly from TextMate; it could probably be
 # cleaner, I don't know how to do it in vim script)
 snippet once
-	#ifndef ${1:`toupper(Filename('', 'UNTITLED').'_'.system("/usr/bin/ruby -e 'print (rand * 2821109907455).round.to_s(36)'"))`}
+	#ifndef ${1:`toupper(Filename('', 'UNTITLED').'_'.'H')`}
 	#define $1
 
 	${2}
@@ -42,12 +42,12 @@ snippet if
 	if (${1:/* condition */}) {
 		${2:/* code */}
 	}
-snippet el
+snippet else
 	else {
 		${1}
 	}
 # Tertiary conditional
-snippet t
+snippet tr
 	${1:/* condition */} ? ${2:a} : ${3:b}
 # Do While Loop
 snippet do
@@ -55,7 +55,7 @@ snippet do
 		${2:/* code */}
 	} while (${1:/* condition */});
 # While Loop
-snippet wh
+snippet while
 	while (${1:/* condition */}) {
 		${2:/* code */}
 	}
@@ -65,7 +65,7 @@ snippet for
 		${4:/* code */}
 	}
 # Custom For Loop
-snippet forr
+snippet For
 	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
 		${5:/* code */}
 	}
@@ -75,6 +75,19 @@ snippet fun
 	${2:my_function}(${3})
 	{
 		${4:/* code */}
+	}
+snippet Fun
+	/*------------------------------------------------------------------------------
+	 *    Function: ${1:my_function}
+	 * Description: ${2:none}
+	 *      Params: ${3:none}
+	 *     Returns: ${4:none}
+	 *------------------------------------------------------------------------------
+	 */	
+	${5:void}
+	$1(${6:void})
+	{
+		${7:/* code */}
 	}
 # Function Declaration
 snippet fund
@@ -108,7 +121,7 @@ snippet fpr
 # Parenthesis, Brackets, Braces and Quotes ???
 snippet .
 	[${1}]${2}
-# File header
+# Header
 snippet header
 	/*==============================================================================
 	 *        File: ${1:`expand('%:t')`}
@@ -116,35 +129,24 @@ snippet header
 	 *
 	 * Copyright `&enc[:2]=="utf"?"©":"(c)"` `strftime("%Y")` `g:snips_compary`. All Rights Reserved.
 	 *
-	 *      Author: `g:snips_author` (`g:snips_email`)
+	 *      Author: ${3:`g:snips_author`} (${4:`g:snips_email`})
 	 *     Created: `strftime("%Y-%m-%d")`
-	 *    Revision: none
+	 *    Modified: `strftime("%Y-%m-%d")` | v0.1 | $3 ($4)
+	 *                  Initial version
 	 *==============================================================================
 	 */
-	${3}
-# Function commenter
-snippet fc
-	/*==============================================================================
-	 *    Function: ${1:my_function}
-	 * Description: ${2}
-	 *==============================================================================
-	 */	
-	${3}
-# Function with commenter
-snippet Fun
-	/*==============================================================================
-	 *    Function: ${1:my_function}
-	 * Description: ${2}
-	 *==============================================================================
-	 */	
-	${3:void}
-	$1(${4:void})
-	{
-		${5:/* code */}
-	}
-# Section commenter
-snippet sc
+	${5}
+# Section
+snippet section
 	/*==============================================================================
 	 * ${1}
 	 *==============================================================================
 	 */
+	${2}
+# Commenter
+snippet comment
+	/*------------------------------------------------------------------------------
+	 * ${1}
+	 *------------------------------------------------------------------------------
+	 */
+	${2}

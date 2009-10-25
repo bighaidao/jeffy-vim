@@ -2,8 +2,9 @@
 "        File: .vimrc
 " Description: VIM configuration file ~/.vimrc
 "      Author: Jeffy (jeffy.du@gmail.com)
-"     Created: 2009/10/23
-"    Revision: 2009/10/23 | v0.1 | jeffy (jeffy.du@gmail.com)
+"        Date: 2009-10-25
+"    Modified: 2009-10-25 | v0.1 | Jeffy (jeffy.du@gmail.com)
+"                  Initial version
 "===============================================================================
 
 "===============================================================================
@@ -255,7 +256,7 @@ vmap <leader>mr <Plug>MarkRegex
 "-------------------------------------------------------------------------------
 " snipMate.vim - make your vim work as textMate
 "-------------------------------------------------------------------------------
-let g:snips_author="Jeffy Du"
+let g:snips_author="Jeffy"
 let g:snips_email="jeffy.du@gmail.com"
 let g:snips_compary="SicMicro"
 "}}}
