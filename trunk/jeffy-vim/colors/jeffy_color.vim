@@ -5,14 +5,13 @@
 "        Date: 2009-10-26
 "    Modified: 2009-10-26 | v0.1 | Jeffy Du (jeffy.du@gmail.com)
 "                  Initial version
-"        TODO:
 "===============================================================================
 
 
 "===============================================================================
 " Global Initializations
 "===============================================================================
-
+"{{{
 "-------------------------------------------------------------------------------
 " clear old syntax
 "-------------------------------------------------------------------------------
@@ -25,17 +24,16 @@ endif
 " external colorscheme name
 "-------------------------------------------------------------------------------
 let g:colors_name="jeffy_color"
-
+"}}}
 
 "===============================================================================
 " Color Settings
 "===============================================================================
 "{{{
-hi Normal     guifg=lightgrey guibg=black ctermfg=lightgrey ctermbg=black
-hi Visual     guifg=white     guibg=black ctermfg=white     ctermbg=black
-hi Folded     guifg=darkgrey  guibg=black ctermfg=darkgrey  ctermbg=black gui=bold cterm=bold
-hi CursorLine guifg=none      guibg=darkgrey ctermfg=none   ctermbg=darkgrey gui=bold cterm=bold
-hi Pmenu      guifg=black     guibg=yellow ctermfg=black ctermbg=yellow
-hi PmenuSel   guifg=blue guibg=green ctermfg=blue ctermbg=green
-
+hi Normal     guifg=lightgrey guibg=black    ctermfg=lightgrey ctermbg=black
+hi Visual     guifg=white     guibg=black    ctermfg=white     ctermbg=black
+hi Folded     guifg=yellow    guibg=black    ctermfg=yellow    ctermbg=black  gui=bold cterm=bold
+hi CursorLine                 guibg=black                      ctermbg=black  gui=bold cterm=bold
+hi Pmenu      guifg=black     guibg=yellow   ctermfg=black     ctermbg=yellow
+hi PmenuSel   guifg=white     guibg=green    ctermfg=white     ctermbg=green  gui=bold cterm=bold
 "}}}

@@ -64,6 +64,7 @@ set cindent                     " indent for C/C++ type
 set cinoptions=:0               " options for C indent
 set complete+=k                 " scan the files given with the 'dictionary' option
 set completeopt=longest,menuone " completion options
+set cursorline                  " show current line
 set foldenable                  " auto fold code
 set foldmethod=marker           " fold by manual marker
 set guioptions-=T               " remove toolbar of gvim
