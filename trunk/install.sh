@@ -12,7 +12,7 @@ echo -n "Now, install vim files..."
 
 # remove old files
 if [[ -d ~/.vim ]]; then
-	rm -r ~/.vim
+	rm -rf ~/.vim
 fi
 if [[ -f ~/.vimrc ]]; then
 	rm ~/.vimrc
@@ -23,8 +23,8 @@ cp -r ./jeffy-vim ~/.vim
 cp ./jeffy-vimrc ~/.vimrc
 
 # create backup directory
-if [[ ! -d ~/.vim.backupdir ]]; then
-	mkdir ~/.vim.backupdir
+if [[ ! -d ~/.vim_backupdir ]]; then
+	mkdir ~/.vim_backupdir
 fi
 
 echo "done." 

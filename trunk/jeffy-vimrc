@@ -34,14 +34,14 @@ syntax on
 "-------------------------------------------------------------------------------
 if  has("win32")
     runtime mswin.vim
-    set backupdir =$VIM\vimfiles\vim.backupdir,.
+    set backupdir =$VIM\vimfiles\vim_backupdir,.
     set dictionary=$VIM\vimfiles\wordlists/german.list
     autocmd! bufwritepost _vimrc source $VIM\_vimrc
     if has("gui_running")
         au GUIEnter * simalt ~x " maxmal window on open
     endif
 else
-    set backupdir =$HOME/.vim.backupdir,.
+    set backupdir =$HOME/.vim_backupdir,.
     set dictionary=$HOME/.vim/wordlists/german.list
     autocmd! bufwritepost .vimrc source $HOME/.vimrc
 endif
