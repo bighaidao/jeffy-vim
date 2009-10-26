@@ -27,6 +27,10 @@ filetype indent on
 "-------------------------------------------------------------------------------
 syntax on            
 "-------------------------------------------------------------------------------
+" Setting a colorscheme
+"-------------------------------------------------------------------------------
+color jeffy_color
+"-------------------------------------------------------------------------------
 " Platform specific items:
 " - central backup directory (has to be created)
 " - default dictionary
@@ -44,6 +48,7 @@ else
     set backupdir =$HOME/.vim_backupdir,.
     set dictionary=$HOME/.vim/wordlists/german.list
     autocmd! bufwritepost .vimrc source $HOME/.vimrc
+    autocmd! bufwritepost jeffy_color.vim source $HOME/.vimrc
 endif
 "-------------------------------------------------------------------------------
 " Various settings
@@ -256,7 +261,7 @@ vmap <leader>mr <Plug>MarkRegex
 "-------------------------------------------------------------------------------
 " snipMate.vim - make your vim work as textMate
 "-------------------------------------------------------------------------------
-let g:snips_author="Jeffy"
+let g:snips_author="Jeffy Du"
 let g:snips_email="jeffy.du@gmail.com"
 let g:snips_compary="SicMicro"
 "}}}
