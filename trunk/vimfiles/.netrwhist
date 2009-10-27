@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jeffy/Public/project/app-linux'
+let g:netrw_dirhist_2='/home/jeffy/Public/project/app-linux/app'
+let g:netrw_dirhist_3='/home/jeffy/Public/project/app-linux'
+let g:netrw_dirhist_4='/home/jeffy/Public/project/app-linux/sicsi'
+let g:netrw_dirhist_5='/home/jeffy/Public/project/app-linux/sicsi/database'
+let g:netrw_dirhist_6='/home/jeffy/Public/project/app-linux/sicsi/database/src'
