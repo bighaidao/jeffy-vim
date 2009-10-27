@@ -19,8 +19,8 @@ if [[ -f ~/.vimrc ]]; then
 fi
 
 # copy new files
-cp -r ./jeffy-vim ~/.vim
-cp ./jeffy-vimrc ~/.vimrc
+cp -r ./vimfiles ~/.vim
+cp ./vimrc ~/.vimrc
 
 # create backup directory
 if [[ ! -d ~/.vim_backupdir ]]; then
