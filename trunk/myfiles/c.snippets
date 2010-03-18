@@ -1,0 +1,75 @@
+# file header
+snippet hdr
+	/*
+	 * ${1:`expand('%:t')`} - ${2}
+	 *
+	 * (c) Copyright ${3:`g:snips_copyright`}. All Rights Reserved.
+	 *
+	 * Maintainer: ${4:`g:snips_author`} <${5:`g:snips_email`}>
+	 *    Created: `strftime("%Y-%m-%d")`
+	 * LastChange: `strftime("%Y-%m-%d")`
+	 */
+	${6}
+# include file
+snippet inc
+	#include <${1:stdio}.h>${2}
+snippet Inc
+	#include "${1:`Filename("$1")`}.h"${2}
+# macro defines
+snippet def
+	#define 
+snippet ifd
+	#ifdef ${1}
+	#endif
+snippet ifn
+	#ifndef ${1}
+	#endif
+snippet once
+	#ifndef ${1:`toupper(Filename('', 'UNTITLED').'_H')`}
+	#define $1
+
+	${2}
+
+	#endif /* $1 */
+# condition
+snippet if
+	if (${1:/* condition */}) {
+		${2:/* code */}
+	}${3}
+snippet else
+	else {
+		${1:/* code */}
+	}${2}
+# loop
+snippet do
+	do {
+		${1:/* code */}
+	} while (${2:/* condition */});${3}
+snippet while
+	while (${1:/* condition */}) {
+		${2:/* code */}
+	}${3}
+snippet for
+	for (${1:/* initialize */}; ${2:/* condition */}; ${3:/* loop */}) {
+		${4:/* code */}
+	}${5}
+# structure
+snippet struct
+	struct ${1}{
+		${2:/* data */}
+	}${3};${4}
+snippet union
+	union ${1}{
+		${2:/* data */}
+	}${3};${4}
+snippet enum
+	enum ${1}{
+		${2:/* data */}
+	}${3};${4}
+# main()
+snippet main
+	int main(int argc, const char *argv[])
+	{
+		${1}
+		return 0;
+	}
