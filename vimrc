@@ -1,5 +1,9 @@
 " .vimrc - Vim configuration file.
+"
+" (c) Copyright 2010 Jeffy Du. All Rights Reserved.
+"
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
+"    Created: 2010-01-01
 " LastChange: 2010-03-16
 
 " GENERAL SETTINGS: {{{1
@@ -119,6 +123,10 @@ let g:LookupFile_AlwaysAcceptFirst=1
 let g:LookupFile_AllowNewFiles=0
 " Man.vim
 source $VIMRUNTIME/ftplugin/man.vim
+" snipMate
+let g:snips_author="Jeffy Du"
+let g:snips_email="jeffy.du@gmail.com"
+let g:snips_copyright="SicMicro, Inc"
 " plugin shortcuts
 function! RunShell(Msg, Shell)
 	echo a:Msg . '...'
