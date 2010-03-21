@@ -35,3 +35,9 @@ fi
 echo -n "Update scripts..."
 vim "+GetScripts" "+q"
 echo "done!"
+
+### copy my own files
+cp ./myfiles/c.snippets ~/.vim/snippets/c.snippets
+
+### finish install
+echo "install finished, enjoy yourself!"

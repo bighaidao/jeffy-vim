@@ -21,8 +21,7 @@ let s:HLUDFlag = ['d', 'e', 'f', 'g', 'p', 's', 't', 'u']
 let s:HLUDType = []
 
 " file for save HLUD tags data
-let s:HLUD_TagsFile = 'tags_hlud'
-let s:TagsFilename = 'tags'
+let s:HLUD_TagsFile = 'tags.usertype'
 
 " Initialize stript
 function! HLUDInit(TagFilename)
@@ -59,14 +58,14 @@ endfunction
 " sync tag data
 function! HLUDSync()
 	" if tag file is not exist, do nothing.
-	if !filereadable(s:TagsFilename)
-		echo 'err: no tagfile'
+	if !filereadable("tags")
+		echo "err: no tags file"
 		return
 	endif
 
 	" parse tag file line by line.
-	echo "sync tags ... "
-	for line in readfile(s:TagsFilename)
+	echo "Generate usertype tags..."
+	for line in readfile("tags")
 		" parse tag flag
 		let s:idx = stridx(line, ';"' . "\t")
 		if s:idx != -1
@@ -79,7 +78,7 @@ function! HLUDSync()
 			endif
 		endif
 	endfor
-	echo "done!"
+	echon "done"
 
 	" write tags data to file.
 	call writefile(s:HLUDType, s:HLUD_TagsFile)
