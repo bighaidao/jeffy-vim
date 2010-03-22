@@ -57,6 +57,7 @@ set   wildmode=list:longest,full
 set nowrap
 
 " AUTO COMMANDS: {{{1
+" auto expand tab to blanks
 autocmd FileType c,cpp set expandtab
 " Restore the last quit position when open file.
 autocmd BufReadPost *
@@ -154,4 +155,4 @@ nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>si :cs find i <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
 nmap <leader>wo <C-w>o
-
+nmap <leader>gs :GetScripts<cr>
