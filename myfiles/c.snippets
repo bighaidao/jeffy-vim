@@ -3,7 +3,7 @@ snippet hdr
 	/*
 	 * ${1:`expand('%:t')`} - ${2}
 	 *
-	 * (c) Copyright ${3:`g:snips_copyright`}. All Rights Reserved.
+	 * (c) Copyright `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
 	 *
 	 * Maintainer: ${4:`g:snips_author`} <${5:`g:snips_email`}>
 	 *    Created: `strftime("%Y-%m-%d")`

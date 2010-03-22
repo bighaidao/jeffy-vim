@@ -4,7 +4,7 @@ ScriptID SourceID Filename
   42 1 :AutoInstall: BufExplorer
 1735 1 :AutoInstall: EchoFunc
  197 1 :AutoInstall: Genutils
- 311 1 :AutoInstall: grep
+ 311 1 :AutoInstall: Grep
 1581 1 :AutoInstall: LookupFile
  521 1 :AutoInstall: MRU
 1218 1 :AutoInstall: NERD_Commenter
