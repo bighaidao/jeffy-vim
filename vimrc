@@ -65,7 +65,6 @@ autocmd BufReadPost *
     \ endif
 
 " SHORTCUT SETTINGS: {{{1
-
 " Set mapleader
 let mapleader=","
 " Space to command mode.
@@ -80,6 +79,9 @@ inoremap <C-h> <Esc><C-W>h
 inoremap <C-j> <Esc><C-W>j
 inoremap <C-k> <Esc><C-W>k
 inoremap <C-l> <Esc><C-W>l
+" "cd" to change to open directory.
+let OpenDir=system("pwd")
+nmap <silent> <leader>cd :exe 'cd ' . OpenDir<cr>:pwd<cr>
 
 " PLUGIN SETTINGS: {{{1
 " taglist.vim
@@ -151,4 +153,5 @@ nmap <leader>se :cs find e <C-R>=expand("<cword>")<cr><cr>
 nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>si :cs find i <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
+nmap <leader>wo <C-w>o
 
