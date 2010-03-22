@@ -4,7 +4,7 @@
 "
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
 "    Created: 2010-01-01
-" LastChange: 2010-03-16
+" LastChange: 2010-03-22
 
 " GENERAL SETTINGS: {{{1
 " To use VIM settings, out of VI compatible mode.
