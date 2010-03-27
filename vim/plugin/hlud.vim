@@ -87,8 +87,8 @@ function! HLUDSync()
 	call HLUDColor()
 endfunction
 
-autocmd FileType c,cpp call HLUDColor()
+autocmd BufEnter,FileType c,cpp call HLUDColor()
 
-call HLUDInit('tags_hlud')
+call HLUDInit(s:HLUD_TagsFile)
 
 let &cpo = s:save_cpo
