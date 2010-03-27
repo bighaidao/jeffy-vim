@@ -23,6 +23,7 @@ set   backspace=indent,eol,start
 set nobackup
 set   cindent
 set   cinoptions=:0,l1,g0,(0,w1,W4
+set   cursorline
 set   completeopt=longest,menuone
 set   encoding=utf-8
 set noexpandtab
