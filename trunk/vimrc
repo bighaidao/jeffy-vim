@@ -97,7 +97,8 @@ let g:Tlist_Auto_Highlight_Tag=1
 " NERDTree.vim
 let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=25
-let NERDTreeShowLineNumbers=0
+let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeQuitOnOpen=1
 " cscope.vim
 if has("cscope")
     set csto=1
@@ -143,7 +144,7 @@ nmap  <F4> :MRU<cr>
 nmap  <F5> <Plug>LookupFile<cr>
 nmap  <F6> :Grep<cr>
 nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
-nmap <F10> :call RunShell("Generate cscope", "cscope -Rb")<cr>
+nmap <F10> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
 nmap <F11> :call HLUDSync()<cr>
 nmap <F12> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
 nmap <leader>sa :cs add cscope.out<cr>
