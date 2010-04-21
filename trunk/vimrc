@@ -4,7 +4,7 @@
 "
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
 "    Created: 2010-01-01
-" LastChange: 2010-03-22
+" LastChange: 2010-04-21
 
 " GENERAL SETTINGS: {{{1
 " To use VIM settings, out of VI compatible mode.
@@ -25,7 +25,6 @@ set   cindent
 set   cinoptions=:0,l1,g0,(0,w1,W4
 set   cursorline
 set   completeopt=longest,menuone
-set   encoding=utf-8
 set noexpandtab
 set   fileencodings=utf-8,gb2312,gbk,gb18030
 set   fileformat=unix
@@ -142,7 +141,7 @@ nmap  <F2> :TlistToggle<cr>
 nmap  <F3> :NERDTreeToggle<cr>
 nmap  <F4> :MRU<cr>
 nmap  <F5> <Plug>LookupFile<cr>
-nmap  <F6> :Grep<cr>
+nmap  <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
 nmap <F10> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
 nmap <F11> :call HLUDSync()<cr>
