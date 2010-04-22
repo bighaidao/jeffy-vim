@@ -4,7 +4,7 @@
 "
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
 "    Created: 2010-01-01
-" LastChange: 2010-04-21
+" LastChange: 2010-04-22
 
 " GENERAL SETTINGS: {{{1
 " To use VIM settings, out of VI compatible mode.
@@ -25,11 +25,16 @@ set   cindent
 set   cinoptions=:0,l1,g0,(0,w1,W4
 set   cursorline
 set   completeopt=longest,menuone
+"set   encoding=utf-8
 set noexpandtab
 set   fileencodings=utf-8,gb2312,gbk,gb18030
 set   fileformat=unix
 set   foldenable
 set   foldmethod=marker
+set   guioptions-=T
+set   guioptions-=m
+set   guioptions-=r
+set   guioptions-=l
 set   helpheight=10
 set   helplang=cn
 set   hidden

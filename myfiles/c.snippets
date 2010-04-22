@@ -3,7 +3,7 @@ snippet hdr
 	/*
 	 * ${1:`expand('%:t')`} - ${2}
 	 *
-	 * (c) Copyright `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
+	 * Copyright (c) `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
 	 *
 	 * Maintainer: ${4:`g:snips_author`} <${5:`g:snips_email`}>
 	 *    Created: `strftime("%Y-%m-%d")`
@@ -12,9 +12,9 @@ snippet hdr
 	${6}
 # include file
 snippet inc
-	#include <${1:stdio}.h>${2}
+	#include "${1:stdio.h}"${2}
 snippet Inc
-	#include "${1:`Filename("$1")`}.h"${2}
+	#include <${1:`Filename("$1")`.h}>${2}
 # macro defines
 snippet def
 	#define 
@@ -57,15 +57,15 @@ snippet for
 snippet struct
 	struct ${1}{
 		${2:/* data */}
-	}${3};${4}
+	};${3}
 snippet union
 	union ${1}{
 		${2:/* data */}
-	}${3};${4}
+	};${3}
 snippet enum
 	enum ${1}{
 		${2:/* data */}
-	}${3};${4}
+	};${3}
 # main()
 snippet main
 	int main(int argc, const char *argv[])
