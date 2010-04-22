@@ -1,6 +1,6 @@
 " .vimrc - Vim configuration file.
 "
-" (c) Copyright 2010 Jeffy Du. All Rights Reserved.
+" Copyright (c) 2010 Jeffy Du. All Rights Reserved.
 "
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
 "    Created: 2010-01-01
