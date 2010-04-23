@@ -37,7 +37,9 @@ vim "+GetScripts" "+q"
 echo "done!"
 
 ### copy my own files
+echo -n "Copy myfiles..."
 cp ./myfiles/c.snippets ~/.vim/snippets/c.snippets
+echo "done!"
 
 ### finish install
 echo "install finished, enjoy yourself!"
