@@ -19,10 +19,11 @@ color mycolor
 set   autoindent
 set   autoread
 set   autowrite
+set   background=dark
 set   backspace=indent,eol,start
 set nobackup
 set   cindent
-set   cinoptions=:0,l1,g0,(0,w1,W4
+set   cinoptions=:0
 set   cursorline
 set   completeopt=longest,menuone
 set noexpandtab
@@ -62,7 +63,7 @@ set nowrap
 
 " AUTO COMMANDS: {{{1
 " auto expand tab to blanks
-autocmd FileType c,cpp set expandtab
+"autocmd FileType c,cpp set expandtab
 " Restore the last quit position when open file.
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -132,8 +133,8 @@ let g:LookupFile_AllowNewFiles=0
 " Man.vim
 source $VIMRUNTIME/ftplugin/man.vim
 " snipMate
-let g:snips_author="Jeffy Du"
-let g:snips_email="jeffy.du@gmail.com"
+let g:snips_author="Du Jianfeng"
+let g:snips_email="cmdxiaoha@163.com"
 let g:snips_copyright="SicMicro, Inc"
 " plugin shortcuts
 function! RunShell(Msg, Shell)
@@ -147,9 +148,9 @@ nmap  <F4> :MRU<cr>
 nmap  <F5> <Plug>LookupFile<cr>
 nmap  <F6> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 nmap  <F9> :call RunShell("Generate tags", "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .")<cr>
-nmap <F10> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
-nmap <F11> :call HLUDSync()<cr>
-nmap <F12> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
+nmap <F10> :call HLUDSync()<cr>
+nmap <F11> :call RunShell("Generate filename tags", "~/.vim/shell/genfiletags.sh")<cr>
+nmap <F12> :call RunShell("Generate cscope", "cscope -Rb")<cr>:cs add cscope.out<cr>
 nmap <leader>sa :cs add cscope.out<cr>
 nmap <leader>ss :cs find s <C-R>=expand("<cword>")<cr><cr>
 nmap <leader>sg :cs find g <C-R>=expand("<cword>")<cr><cr>
@@ -159,5 +160,5 @@ nmap <leader>se :cs find e <C-R>=expand("<cword>")<cr><cr>
 nmap <leader>sf :cs find f <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>si :cs find i <C-R>=expand("<cfile>")<cr><cr>
 nmap <leader>sd :cs find d <C-R>=expand("<cword>")<cr><cr>
-nmap <leader>wo <C-w>o
+nmap <leader>zz <C-w>o
 nmap <leader>gs :GetScripts<cr>
