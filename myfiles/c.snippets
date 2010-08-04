@@ -3,7 +3,7 @@ snippet hdr
 	/*
 	 * ${1:`expand('%:t')`} - ${2}
 	 *
-	 * Copyright (c) `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
+	 * (c) Copyright `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
 	 *
 	 * Maintainer: ${4:`g:snips_author`} <${5:`g:snips_email`}>
 	 *    Created: `strftime("%Y-%m-%d")`
@@ -11,10 +11,10 @@ snippet hdr
 	 */
 	${6}
 # include file
-snippet inc
-	#include "${1:stdio.h}"${2}
 snippet Inc
-	#include <${1:`Filename("$1")`.h}>${2}
+	#include <${1:stdio}.h>${2}
+snippet inc
+	#include "${1:`Filename("$1")`}.h"${2}
 # macro defines
 snippet def
 	#define 
@@ -33,39 +33,47 @@ snippet once
 	#endif /* $1 */
 # condition
 snippet if
-	if (${1:/* condition */}) {
+	if (${1:/* condition */})
+	{
 		${2:/* code */}
-	}${3}
+	}
 snippet else
-	else {
+	else
+	{
 		${1:/* code */}
-	}${2}
+	}
 # loop
 snippet do
-	do {
-		${1:/* code */}
-	} while (${2:/* condition */});${3}
-snippet while
-	while (${1:/* condition */}) {
+	do
+	{
 		${2:/* code */}
-	}${3}
+	} while (${1:/* condition */});
+snippet while
+	while (${1:/* condition */})
+	{
+		${2:/* code */}
+	}
 snippet for
-	for (${1:/* initialize */}; ${2:/* condition */}; ${3:/* loop */}) {
+	for (${1:/* initialize */}; ${2:/* condition */}; ${3:/* loop */})
+	{
 		${4:/* code */}
-	}${5}
+	}
 # structure
 snippet struct
-	struct ${1}{
-		${2:/* data */}
-	};${3}
+	typedef struct ${1:mystruct}
+	{
+		${3:/* member */}
+	} ${2:$1_s};
 snippet union
-	union ${1}{
-		${2:/* data */}
-	};${3}
+	typedef union ${1:myunion}
+	{
+		${3:/* member */}
+	} ${2:$1_u};
 snippet enum
-	enum ${1}{
-		${2:/* data */}
-	};${3}
+	typedef enum ${1:myenum}
+	{
+		${3:/* member */}
+	} ${2:$1_e};
 # main()
 snippet main
 	int main(int argc, const char *argv[])
