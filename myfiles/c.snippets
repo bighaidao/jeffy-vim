@@ -1,15 +1,23 @@
 # file header
 snippet hdr
-	/*
+	/********************************************************************************
 	 * ${1:`expand('%:t')`} - ${2}
 	 *
-	 * (c) Copyright `strftime("%Y")` ${3:`g:snips_copyright`}. All Rights Reserved.
+	 * @fcopyright	Copyright `strftime("%Y")` SIC Microelectronics CO. Ltd.
+	 * @fauthor		[ `g:snips_author` ] [ `g:snips_email` ]
+	 * @fversion	1.0
 	 *
-	 * Maintainer: ${4:`g:snips_author`} <${5:`g:snips_email`}>
-	 *    Created: `strftime("%Y-%m-%d")`
-	 * LastChange: `strftime("%Y-%m-%d")`
-	 */
-	${6}
+	 * @fhistory	[ `strftime("%Y-%m-%d")` ] Create file.
+	 *******************************************************************************/
+	${3}
+# function header
+snippet funh
+	/**
+	 * function:	${1}
+	 * @param [ in]	${2}
+	 * @param [out]	${3}
+	 * @return		${4}
+	 */${5}
 # include file
 snippet Inc
 	#include <${1:stdio}.h>${2}
@@ -58,22 +66,6 @@ snippet for
 	{
 		${4:/* code */}
 	}
-# structure
-snippet struct
-	typedef struct ${1:mystruct}
-	{
-		${3:/* member */}
-	} ${2:$1_s};
-snippet union
-	typedef union ${1:myunion}
-	{
-		${3:/* member */}
-	} ${2:$1_u};
-snippet enum
-	typedef enum ${1:myenum}
-	{
-		${3:/* member */}
-	} ${2:$1_e};
 # main()
 snippet main
 	int main(int argc, const char *argv[])
