@@ -54,7 +54,6 @@ set   smartindent
 set   smartcase
 set   tabstop=4
 set   termencoding=utf-8
-set   textwidth=80
 set   whichwrap=h,l
 set   wildignore=*.bak,*.o,*.e,*~
 set   wildmenu
@@ -135,7 +134,6 @@ source $VIMRUNTIME/ftplugin/man.vim
 " snipMate
 let g:snips_author="Du Jianfeng"
 let g:snips_email="cmdxiaoha@163.com"
-let g:snips_copyright="SicMicro, Inc"
 " plugin shortcuts
 function! RunShell(Msg, Shell)
 	echo a:Msg . '...'
