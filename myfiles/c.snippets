@@ -1,15 +1,15 @@
 # file header
 snippet hdr
-	/********************************************************************************
-	 * ${1:`expand('%:t')`} - ${2}
+	/*******************************************************************************
+	 * `expand('%:t')` ${1}
 	 *
 	 * @fcopyright	Copyright `strftime("%Y")` SIC Microelectronics CO. Ltd.
-	 * @fauthor		[ `g:snips_author` ] [ `g:snips_email` ]
+	 * @fauthor		[`g:snips_author`] [`g:snips_email`]
 	 * @fversion	1.0
 	 *
-	 * @fhistory	[ `strftime("%Y-%m-%d")` ] Create file.
-	 *******************************************************************************/
-	${3}
+	 * @fhistory	[`strftime("%Y-%m-%d")`] Create file.
+	 ******************************************************************************/
+	${2}
 # function header
 snippet funh
 	/**
