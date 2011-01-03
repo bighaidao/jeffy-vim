@@ -31,10 +31,6 @@ set   fileencodings=utf-8,gb2312,gbk,gb18030
 set   fileformat=unix
 set   foldenable
 set   foldmethod=marker
-set   guioptions-=T
-set   guioptions-=m
-set   guioptions-=r
-set   guioptions-=l
 set   helpheight=10
 set   helplang=cn
 set   hidden
@@ -62,7 +58,7 @@ set nowrap
 
 " AUTO COMMANDS: {{{1
 " auto expand tab to blanks
-autocmd FileType c,cpp set expandtab
+"autocmd FileType c,cpp set expandtab
 " Restore the last quit position when open file.
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -86,7 +82,8 @@ inoremap <C-k> <Esc><C-W>k
 inoremap <C-l> <Esc><C-W>l
 " "cd" to change to open directory.
 let OpenDir=system("pwd")
-nmap <silent> <leader>cd :exe 'cd ' . OpenDir<cr>:pwd<cr>
+nmap <silent> <leader>cdr :exe 'cd ' . OpenDir<cr>:pwd<cr>
+nmap <silent> <leader>cdf :cd %:h<cr>:pwd<cr>
 
 " PLUGIN SETTINGS: {{{1
 " taglist.vim
