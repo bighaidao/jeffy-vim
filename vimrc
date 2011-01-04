@@ -16,6 +16,7 @@ syntax on
 " Setting colorscheme
 color mycolor
 " Other settings.
+"let &termencoding=&encoding
 set   autoindent
 set   autoread
 set   autowrite
@@ -24,13 +25,19 @@ set   backspace=indent,eol,start
 set nobackup
 set   cindent
 set   cinoptions=:0
-set   cursorline
+set   colorcolumn=+1
 set   completeopt=longest,menuone
+set   cursorline
+set   encoding=utf-8
 set noexpandtab
 set   fileencodings=utf-8,gb2312,gbk,gb18030
 set   fileformat=unix
 set   foldenable
 set   foldmethod=marker
+set   guioptions-=T
+set   guioptions-=m
+set   guioptions-=r
+set   guioptions-=l
 set   helpheight=10
 set   helplang=cn
 set   hidden
@@ -50,6 +57,7 @@ set   smartindent
 set   smartcase
 set   tabstop=4
 set   termencoding=utf-8
+set   textwidth=80
 set   whichwrap=h,l
 set   wildignore=*.bak,*.o,*.e,*~
 set   wildmenu
@@ -120,7 +128,7 @@ if has("gdb")
 	run macros/gdb_mappings.vim
 endif
 " LookupFile setting
-let g:LookupFile_TagExpr='"./tags.filename"'
+let g:LookupFile_TagExpr='"tags.fn"'
 let g:LookupFile_MinPatLength=2
 let g:LookupFile_PreserveLastPattern=0
 let g:LookupFile_PreservePatternHistory=1
@@ -131,6 +139,7 @@ source $VIMRUNTIME/ftplugin/man.vim
 " snipMate
 let g:snips_author="Du Jianfeng"
 let g:snips_email="cmdxiaoha@163.com"
+let g:snips_copyright="SicMicro, Inc"
 " plugin shortcuts
 function! RunShell(Msg, Shell)
 	echo a:Msg . '...'
