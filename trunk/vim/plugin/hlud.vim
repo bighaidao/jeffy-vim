@@ -1,5 +1,5 @@
 " hlud.vim - highlight user definitions, such as types functions defines...
-" LastChange: 2010-03-11
+" LastChange: 2011-01-04
 " Maintainer: Jeffy Du <jeffy.du@163.com>
 "
 " License:    This file is placed in the public domain
@@ -21,7 +21,7 @@ let s:HLUDFlag = ['d', 'e', 'f', 'g', 'p', 's', 't', 'u']
 let s:HLUDType = []
 
 " file for save HLUD tags data
-let s:HLUD_TagsFile = 'tags.usertype'
+let s:HLUD_TagsFile = 'tags.ut'
 
 " Initialize stript
 function! HLUDInit(TagFilename)
