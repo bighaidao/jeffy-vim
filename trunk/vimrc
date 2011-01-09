@@ -33,10 +33,6 @@ set   fileencodings=utf-8,gb2312,gbk,gb18030
 set   fileformat=unix
 set   foldenable
 set   foldmethod=marker
-set   guioptions-=T
-set   guioptions-=m
-set   guioptions-=r
-set   guioptions-=l
 set   helpheight=10
 set   helplang=cn
 set   hidden
