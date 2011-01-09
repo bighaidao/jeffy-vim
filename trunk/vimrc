@@ -4,7 +4,7 @@
 "
 " Maintainer: Jeffy Du <jeffy.du@gmail.com>
 "    Created: 2010-01-01
-" LastChange: 2010-04-22
+" LastChange: 2011-01-09
 
 " GENERAL SETTINGS: {{{1
 " To use VIM settings, out of VI compatible mode.
@@ -14,9 +14,9 @@ filetype plugin indent on
 " Syntax highlighting.
 syntax on
 " Setting colorscheme
-color mycolor
-" Other settings.
-"let &termencoding=&encoding
+color evening
+" Config for vim72
+if v:version >= 702
 set   autoindent
 set   autoread
 set   autowrite
@@ -29,7 +29,7 @@ set   completeopt=longest,menuone
 set   cursorline
 set   encoding=utf-8
 set noexpandtab
-set   fileencodings=utf-8,gb2312,gbk,gb18030
+set   fileencodings=utf-8,gb2312,gbk,gb18030,chinese
 set   fileformat=unix
 set   foldenable
 set   foldmethod=marker
@@ -58,27 +58,27 @@ set   wildignore=*.bak,*.o,*.e,*~
 set   wildmenu
 set   wildmode=list:longest,full
 set nowrap
-
-if v:version >= 703
-	set   colorcolumn=+1
 endif
-
+" Config for vim73
+if v:version >= 703
+set   colorcolumn=+1
+endif
+" Config for win32 gvim.
 if has("win32")
-	set guioptions-=T
-	set guioptions-=m
-	set guioptions-=r
-	set guioptions-=l
-	source $VIMRUNTIME/delmenu.vim
-	source $VIMRUNTIME/menu.vim
-	language messages zh_CN.utf-8
-	winpos 250 190
-	set lines=26 columns=90
-	color evening
+set   guioptions-=T
+set   guioptions-=m
+set   guioptions-=r
+set   guioptions-=l
+set   lines=26
+set   columns=90
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+language messages zh_CN.utf-8
 endif
 
 " AUTO COMMANDS: {{{1
 " auto expand tab to blanks
-"autocmd FileType c,cpp set expandtab
+autocmd FileType c,cpp set expandtab
 " Restore the last quit position when open file.
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
