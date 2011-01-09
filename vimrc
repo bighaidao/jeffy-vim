@@ -25,7 +25,6 @@ set   backspace=indent,eol,start
 set nobackup
 set   cindent
 set   cinoptions=:0
-set   colorcolumn=+1
 set   completeopt=longest,menuone
 set   cursorline
 set   encoding=utf-8
@@ -63,6 +62,23 @@ set   wildignore=*.bak,*.o,*.e,*~
 set   wildmenu
 set   wildmode=list:longest,full
 set nowrap
+
+if v:version >= 703
+	set   colorcolumn=+1
+endif
+
+if has("win32")
+	set guioptions-=T
+	set guioptions-=m
+	set guioptions-=r
+	set guioptions-=l
+	source $VIMRUNTIME/delmenu.vim
+	source $VIMRUNTIME/menu.vim
+	language messages zh_CN.utf-8
+	winpos 250 190
+	set lines=26 columns=90
+	color evening
+endif
 
 " AUTO COMMANDS: {{{1
 " auto expand tab to blanks
