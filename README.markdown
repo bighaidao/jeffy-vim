@@ -19,13 +19,13 @@ jeffy-vim实现了很多IDE的基本功能，比如：代码解析、代码补�
 Linux系统下需要自己安装ctags、cscope程序；
 如果没有svn，也可以在Downloads里面下载，但不能保证是最新版本。
 
-如果是Linux系统，运行命令
+如果是Linux系统，运行如下命令进行安装：
 
     $ svn checkout http://jeffy-vim.googlecode.com/svn/trunk/ jeffy-vim-read-only
     $ cd jeffy-vim-read-only
     $ ./install.sh
 
-进行安装，如果是Windows系统，把svn上的代码checkout下来后，运行里面的install.bat安装。
+如果是Windows系统，把svn上的代码checkout下来后，运行里面的install.bat进行安装。
 
 
 使用
@@ -47,9 +47,8 @@ Linux系统下需要自己安装ctags、cscope程序；
 > 修改配色方案：
 
 *   本配置文件使用vividchalk的配色方案，如果你对配色不满意，可以修改这个文件
-    vimfiles/bundle/vividchalk/color/vividchalk.vim。
-
-*   修改方法请使用命令":help highlight"查看详细帮助文档。
+    vimfiles/bundle/vividchalk/color/vividchalk.vim。修改方法请使用命令
+    ":help highlight"查看详细帮助文档。
 
 > 快捷键映射：
 
@@ -78,7 +77,7 @@ Linux系统下需要自己安装ctags、cscope程序；
 *   如果你的项目文件及子目录太多，你又不知道你想打开的文件在哪里，此时你就可以按",e"并输入你
     想打开的文件的名字（可以使用正则表达式）再按Tab进行选择，回车就可以打开。
 
-*   现在你已经打开了一个C文件，按",t"将会在VIM的左边打开一个Taglist窗口，这个窗口里面包含了
+*   现在你已经打开了一个C文件，按",t"将会在Vim的左边打开一个Taglist窗口，这个窗口里面包含了
     C文件里面的定义，如struct,typedef,全局变量,函数等。使用"Ctrl-h"将光标移动到左边的窗口，
     上下选择tag按回车定位到tag的定义处。再按",t"就会关闭Taglist窗口。详细的使用方法请参考
     插件Taglist。
@@ -106,14 +105,15 @@ Linux系统下需要自己安装ctags、cscope程序；
 
 *   打开一个C文件，输入几个字符，除非你运气实在不好，否则你就会看到一个弹出菜单。里面会根据你
     输入的内容提示补全。用上下或"Ctrl-p","Ctrl-n"进行选择。在结构体变量后输入"."或"->"的时候
-    也会根据结构成员补全。更多的使用方法请使用":help acp.txt"和":help ":help omnicppcomplete.txt"
+    也会根据结构成员补全。更多的使用方法请使用":help acp.txt"和":help omnicppcomplete.txt"
     查看帮助文档。
 
 *   打开一个C文件，在一个函数实现体中调用另外一个函数。当你输入完这个被调用的函数名，在输入左括
     号的时候在Vim的下方就会显示函数的原型。详细帮助文档请参考echofunc插件。
 
 *   打开一个文件，在一行的开头输入main再按"Tab"键试试，main函数就这样出来了，在main函数里面输入
-    for再按几个"Tab"看看会出现什么效果。更多的代码自动完成请看"vimfiles/bundle/snipMate/snippets/c.snippets"，
+    for再按几个"Tab"看看会出现什么效果。更多的代码自动完成请查看文件
+    "vimfiles/bundle/snipMate/snippets/c.snippets"，
     当然你也可以自己定义代码自动完成。定义方法请使用":help snipMate.txt"
 
 *   此时你可以关闭Vim，下次打开Vim的时候按",r"会打开一个MRU窗口，这个窗口里面记录了最近打开的文件，
