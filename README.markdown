@@ -113,8 +113,10 @@ Linux系统下需要自己安装ctags、cscope程序；
 
 *   打开一个文件，在一行的开头输入main再按"Tab"键试试，main函数就这样出来了，在main函数里面输入
     for再按几个"Tab"看看会出现什么效果。更多的代码自动完成请查看文件
-    "vimfiles/bundle/snipMate/snippets/c.snippets"，
-    当然你也可以自己定义代码自动完成。定义方法请使用":help snipMate.txt"
+    "vimfiles/bundle/snipMate/snippets/c.snippets"，当然你也可以自己定义代码自动完成，定义方法
+    请使用":help snipMate.txt"，请在vimrc里面修改自己的个人信息
+    g:snip_author,g:snip_mail,g:snip_company.
+
 
 *   此时你可以关闭Vim，下次打开Vim的时候按",r"会打开一个MRU窗口，这个窗口里面记录了最近打开的文件，
     上下选择文件回车打开。如果没有你想打开的文件可以按"q"关闭窗口。详细使用方法请参考插件MRU。
